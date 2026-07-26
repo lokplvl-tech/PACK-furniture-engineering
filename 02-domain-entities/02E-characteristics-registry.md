@@ -1,6 +1,6 @@
-# Characteristics Registry Template
+# Characteristics Registry: Мебельный инжиниринг
 
-Use this template to maintain a registry of characteristics relevant to this domain.
+> Источник: технические справочники обоих источников (`06-sota/Эпистемологический стандарт предприятия.md` §7, `06-sota/oneon-kitchen-tehchast.md` §4-§8). Регистр называет и категоризирует измеримые атрибуты домена — полные числовые таблицы остаются в источниках, здесь не дублируются (OwnerIntegrity).
 
 ---
 
@@ -8,65 +8,162 @@ Use this template to maintain a registry of characteristics relevant to this dom
 
 Per FPF (A.17 CHR-NORM): A **characteristic** is a measurable or observable attribute of the object of description within this domain. Characteristics describe **what** is measured or observed, not **how** to develop or change it.
 
-A characteristic is NOT:
-- A method (method is how you act; characteristic is what you measure)
-- A state (state is a temporary mode; characteristic is a stable attribute)
-- A skill (skill enables performance; characteristic is an attribute of the object)
-- An indicator (indicator is an observable sign; characteristic is what the indicator measures)
-
----
-
-## Characteristic Entry Format
-
-### [CHR.NNN] Characteristic Name
-
-**Definition**: _What this characteristic is (without didactics)._
-
-**Category**: _Grouping for navigation (e.g., Core, Resilience, Cognitive, Physical)._
-
-**Indicators**:
-- _Observable sign 1_
-- _Observable sign 2_
-
-**Measurement/test methods**:
-- [DOMAIN.METHOD.XXX](link) — _brief note_
-
-**Related distinctions**:
-- [DOMAIN.D.XXX](link) — _brief note_
-
-**Related formalizations**:
-- [DOMAIN.FORM.XXX](link) — _brief note_
-
-**Epistemic stage**: `formed` | `evidence` | `hypothesis`
-
 ---
 
 ## Characteristics Index
 
-| ID | Characteristic | Category | Epistemic Stage | Card |
-|----|---------------|----------|-----------------|------|
-| CHR.001 | _Name_ | _Category_ | _Stage_ | [link](link) |
+| ID | Characteristic | Category | Epistemic Stage |
+|----|-----------------|----------|--------------------|
+| [FE.CHR.001](#fe-chr-001) | Технический зазор | Геометрия/безопасность | evidence |
+| [FE.CHR.002](#fe-chr-002) | Глубина корпуса модуля | Геометрия | evidence |
+| [FE.CHR.003](#fe-chr-003) | Размер полки | Геометрия (производная) | evidence |
+| [FE.CHR.004](#fe-chr-004) | Погонаж гарнитура | Коммерческая | evidence |
+| [FE.CHR.005](#fe-chr-005) | Габарит встраиваемой техники | Совместимость | evidence |
+| [FE.CHR.006](#fe-chr-006) | Нагрузочная способность направляющих | Фурнитура | evidence |
 
 ---
 
-## Template Entry (Copy This)
+## [FE.CHR.001] Технический зазор
 
-### [CHR.XXX] _Characteristic Name_
+**Definition**: Минимально допустимое расстояние между корпусом модуля и физическим препятствием (стеной, трубой, соседним прибором), обеспечивающее циркуляцию воздуха, монтажный допуск или пожарную безопасность.
 
-**Definition**: _TBD_
-
-**Category**: _TBD_
+**Category**: Геометрия/безопасность
 
 **Indicators**:
--
+- От стены (с техникой / без техники): 51 мм / 41 мм
+- От трубы отопления: 35 мм
+- От метровика (по боковине / по оргалиту): 45 мм / 55 мм
+- От плиты/варочной панели до пенала/мойки/холодильника: 150 мм
+- Полный справочник значений — `06-sota/Эпистемологический стандарт предприятия.md` Таблица 7.1
 
 **Measurement/test methods**:
--
+- [FE.M.001](../03-methods/FE.M.001.md) — фиксируется на шагах 2a, 3a при расстановке
+- Отчёт DRR ([FE.WP.001](../04-work-products/FE.WP.001.md)) — контрольный артефакт
 
 **Related distinctions**:
--
+- [FE.D.006](../01-domain-contract/01B-distinctions.md#fe-d-006) Инвариант vs Настраиваемый параметр — зазор относится к инварианту, не выбирается произвольно
 
-**Related formalizations**:
--
+**Related failure modes**:
+- [FE.GRD.001](../05-failure-modes/FE.GRD.001.md), [FE.GRD.002](../05-failure-modes/FE.GRD.002.md)
 
-**Epistemic stage**: _TBD_
+**Epistemic stage**: `evidence` — числа совпадают дословно в двух независимых источниках (Датум Мебель, ONEON Kitchen)
+
+---
+
+## [FE.CHR.002] Глубина корпуса модуля
+
+**Definition**: Стандартная глубина корпуса модуля (без фасада), зависящая от типа модуля и его функции.
+
+**Category**: Геометрия
+
+**Indicators**:
+- Нижний модуль: 553 мм по корпусу (~600 мм габарит с фасадом и ручкой)
+- Верхний модуль: 300 мм по корпусу (328 мм с фасадом)
+- Пенал: 598 мм (604 мм под холодильник)
+- Метровик (угловой): 555×955 мм
+
+**Measurement/test methods**:
+- [FE.M.001](../03-methods/FE.M.001.md) — задаётся выбором типа модуля на шагах 2a-7
+
+**Related distinctions**:
+- [FE.D.008](../01-domain-contract/01B-distinctions.md#fe-d-008) Холон vs Модуль
+
+**Related objects of attention**:
+- [FE.OA.001](02B-objects-of-attention.md#fe-oa-001) Нижний модуль, [FE.OA.002](02B-objects-of-attention.md#fe-oa-002) Верхний модуль, [FE.OA.003](02B-objects-of-attention.md#fe-oa-003) Пенал, [FE.OA.004](02B-objects-of-attention.md#fe-oa-004) Угловой модуль
+
+**Epistemic stage**: `evidence` — совпадает дословно в обоих источниках (пеналы — идентичные числа для высот 1420/2140/2340)
+
+---
+
+## [FE.CHR.003] Размер полки
+
+**Definition**: Ширина и глубина съёмной полки внутри модуля — производная характеристика, вычисляемая из габарита модуля по фиксированной формуле, а не выбираемая напрямую.
+
+**Category**: Геометрия (производная)
+
+**Indicators**:
+- Ширина = ширина модуля − 32 мм (толщины боковин) − 2 мм (зазор)
+- Глубина = глубина модуля − 10 мм
+- Результирующая глубина: 270 мм (верхние модули), 495 мм (нижние), 540 мм (пеналы)
+- Полка в модуле с газлифтом: строго 240 мм (укорочена под механизм)
+
+**Measurement/test methods**:
+- Расчёт при заказе комплектующих — часть шага 8 [FE.M.001](../03-methods/FE.M.001.md)
+
+**Related distinctions**:
+- [FE.D.006](../01-domain-contract/01B-distinctions.md#fe-d-006) Инвариант vs Настраиваемый параметр — формула сама инвариант, но её входные габариты — настраиваемый параметр
+
+**Epistemic stage**: `evidence` — формула дословно совпадает в обоих источниках, включая частный случай газлифта
+
+---
+
+## [FE.CHR.004] Погонаж гарнитура
+
+**Definition**: Взвешенная длина кухонного гарнитура, к которой применяется ценовой коэффициент — не сумма всех линейных размеров, а сумма с разным весом для нижнего и верхнего яруса.
+
+**Category**: Коммерческая
+
+**Indicators**:
+- Формула: Σ(нижние модули) × 0,7 + Σ(верхние модули) × 0,3
+- Угловые модули считаются по обеим сторонам прилегания к стене
+- Порог полноценного гарнитура: от 1100 мм
+
+**Measurement/test methods**:
+- [FE.M.003](../03-methods/FE.M.003.md) — единственный метод, вычисляющий эту характеристику
+
+**Related distinctions**:
+- [FE.D.006](../01-domain-contract/01B-distinctions.md#fe-d-006) — коэффициенты 0,7/0,3 сами инвариант формулы
+
+**Related roles**:
+- [FE.R.006](02A-roles.md#fe-r-006) Менеджер
+
+**Epistemic stage**: `evidence` — коэффициенты 70%/30% кросс-валидированы дословно двумя компаниями (см. `06-sota/furniture-engineering-sota-sheet.md`)
+
+---
+
+## [FE.CHR.005] Габарит встраиваемой техники
+
+**Definition**: Стандартизированные размеры бытовой техники (ширина/высота/глубина), определяющие размер модуля и фасада, в который она встраивается.
+
+**Category**: Совместимость
+
+**Indicators**:
+- Варочная панель: 600 мм (4 конфорки) / 450 мм (3) / 300 мм (2)
+- Духовой шкаф: 600×600 стандарт, 600×450 узкий, 450×600 компактный
+- ПММ встроенная: 450 мм (8-9 комплектов) / 600 мм (12-13 комплектов)
+- Стиральная машина встроенная: 600 мм, фасад 717×597
+- Полный справочник — `06-sota/oneon-kitchen-tehchast.md` §6
+
+**Measurement/test methods**:
+- [FE.M.001](../03-methods/FE.M.001.md) — интеграция техники на шаге 4; для встроенной техники обязателен точный артикул
+
+**Related failure modes**:
+- [FE.GRD.006](../05-failure-modes/FE.GRD.006.md) — расчёт без артикула
+
+**Epistemic stage**: `evidence` — базовые типоразмеры (варочная панель, духовой шкаф) совпадают в обоих источниках; точный фасад по артикулу — специфика конкретной модели техники, не домена
+
+---
+
+## [FE.CHR.006] Нагрузочная способность направляющих
+
+**Definition**: Максимальная масса, которую выдерживает механизм выдвижения ящика без деформации или отказа — определяет допустимую область применения конкретного типа направляющих.
+
+**Category**: Фурнитура
+
+**Indicators**:
+- ПВШ (полно-выкатные шариковые): 15-20 кг — только в ящике 120 мм под духовым шкафом
+- Тандембокс BOYARD: 30-50 кг в зависимости от модели
+- Тандембокс Hettich Attira: до 50 кг
+- Тандембокс Blum: до 50 кг
+
+**Measurement/test methods**:
+- Выбор фурнитуры на шаге 8 [FE.M.001](../03-methods/FE.M.001.md), после продажи ([FE.R.006](02A-roles.md#fe-r-006) Менеджер)
+
+**Related distinctions**:
+- [FE.D.007](../01-domain-contract/01B-distinctions.md#fe-d-007) Тандембокс vs ПВШ — прямое следствие разницы в этой характеристике
+
+**Epistemic stage**: `evidence` — граница применимости ПВШ (только под духовым шкафом, узкая ниша по нагрузке) совпадает в обоих источниках
+
+---
+
+_Characteristics per FPF A.17 CHR-NORM, SPF.SPEC.001/003. Pack ID: FE._

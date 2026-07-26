@@ -5,7 +5,7 @@ scope: full-pack
 created: 2026-07-26
 last_updated: 2026-07-26
 generated: false
-revision: 2
+revision: 3
 ---
 
 # [FE.MAP.001] Pack Navigation Map
@@ -22,11 +22,12 @@ revision: 2
 | Roles (R) | 6 |
 | Holons (HOL, extended kind) | 7 (L0-L6) |
 | Objects of Attention (OA) | 5 |
+| Characteristics (CHR) | 6 |
 | Methods (M) | 3 (+1 кандидат, не создан: FE.M.004) |
 | Work Products (WP) | 1 |
 | Guards (GRD, extended kind) | 10 |
 | SoTA Sources | 2 |
-| **Total (реально существующих карточек)** | **42** |
+| **Total (реально существующих карточек)** | **48** |
 
 ---
 
@@ -84,6 +85,19 @@ revision: 2
 | FE.OA.004 | Угловой модуль (Метровик) |
 | FE.OA.005 | Datum (базовая плоскость Z) |
 
+## Characteristics (CHR)
+
+> Измеримые атрибуты домена — полные числовые таблицы остаются в источниках, здесь только названы и категоризированы. Индекс: [`02-domain-entities/02E-characteristics-registry.md`](../02-domain-entities/02E-characteristics-registry.md).
+
+| ID | Characteristic | Category |
+|----|-----------------|----------|
+| FE.CHR.001 | Технический зазор | Геометрия/безопасность |
+| FE.CHR.002 | Глубина корпуса модуля | Геометрия |
+| FE.CHR.003 | Размер полки | Геометрия (производная) |
+| FE.CHR.004 | Погонаж гарнитура | Коммерческая |
+| FE.CHR.005 | Габарит встраиваемой техники | Совместимость |
+| FE.CHR.006 | Нагрузочная способность направляющих | Фурнитура |
+
 ## Methods (M)
 
 | ID | Name | Produces | SoTA | Status |
@@ -140,8 +154,7 @@ revision: 2
 
 ## Warnings
 
-- `02-domain-entities/02E-characteristics-registry.md` — не заполнен, содержит только текст шаблона (в т.ч. плейсхолдер `(link)`, это не битая ссылка на реальный файл)
-- Распределение по отдельным файлам («один файл — одна карточка») выдержано только для Methods, Work Products и Guards; Distinctions, Roles, Holons и Objects of Attention остаются подсекциями общих файлов — при будущей автогенерации это потребует либо разбивки на файлы, либо доработки генератора под мультикарточные файлы
+- Распределение по отдельным файлам («один файл — одна карточка») выдержано только для Methods, Work Products и Guards; Distinctions, Roles, Holons, Objects of Attention и Characteristics остаются подсекциями общих файлов — при будущей автогенерации это потребует либо разбивки на файлы, либо доработки генератора под мультикарточные файлы
 
 ---
 

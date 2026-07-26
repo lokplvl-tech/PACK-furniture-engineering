@@ -5,7 +5,7 @@ scope: full-pack
 created: 2026-07-26
 last_updated: 2026-07-26
 generated: false
-revision: 4
+revision: 5
 ---
 
 # [FE.MAP.001] Pack Navigation Map
@@ -26,8 +26,9 @@ revision: 4
 | Methods (M) | 3 (+1 кандидат, не создан: FE.M.004) |
 | Work Products (WP) | 1 |
 | Guards (GRD, extended kind) | 10 |
+| Service Clauses (SC) | 1 |
 | SoTA Sources | 2 |
-| **Total (реально существующих карточек)** | **53** |
+| **Total (реально существующих карточек)** | **54** |
 
 ---
 
@@ -135,6 +136,12 @@ revision: 4
 | [FE.GRD.010](../05-failure-modes/FE.GRD.010.md) | Пропуск обязательных меток при передаче в производство | critical | ✅ концептуально |
 
 Индекс с полным описанием кросс-валидации: [`05-failure-modes/00-guards-index.md`](../05-failure-modes/00-guards-index.md).
+
+## Service Clauses (SC)
+
+| ID | Name | Actor | Depends On | Status |
+|----|------|-------|------------|--------|
+| [FE.SC.001](../08-service-clauses/FE.SC.001.md) | Гарантийное обязательство предприятия перед клиентом | Клиент | FE.WP.001 | draft |
 
 ## SoTA Sources
 

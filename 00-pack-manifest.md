@@ -71,7 +71,7 @@ _Описывает инженерную методологию проектир
 | Holons (HOL, extended) | 7 | active (L0-L6 в 02F-holarchy.md; L1 и L2 — с полными инвариантами, приоритет «Наполнение L1/L2») |
 | Objects of Attention | 5 | active (модули L2 и Datum в 02B-objects-of-attention.md) |
 | Characteristics | 11 | active (02E-characteristics-registry.md; расширен на 5 новых карточек — эмиссия формальдегида, столешница, точность присадки, зазор вытяжки, ширина прохода; полные числовые таблицы остаются в 06-sota/) |
-| SoTA Annotations | 2 | active (два независимых источника, кросс-валидированы) |
+| SoTA Annotations | 4 | active (2 первичных источника компаний, кросс-валидированы; +2 синтезированных производных источника с новыми деталями — см. `06-sota/kitchen-systems-engineering-playbook.md`, `06-sota/functional-space-systems-engineering.md`) |
 | Maps | 1 | active (`07-map/FE.MAP.001.md` собрана вручную — автогенератор SPF несовместим с собственным шаблоном карточки SPF, см. Warnings в самой карте) |
 | Service Clauses | 1 | active (FE.SC.001 — гарантийное обязательство, из §3 источника «Датум Мебель»; раздел был пуст до независимой проверки) |
 

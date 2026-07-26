@@ -1,6 +1,6 @@
-# Objects of Attention Template
+# Objects of Attention: Мебельный инжиниринг
 
-Use this template to document what practitioners in this domain attend to.
+> Источник: холон уровня L2 «Подсистемы (Модули)» — [FE.HOL.L2](02F-holarchy.md#fe-hol-l2). Наполнено по приоритету «Наполнение L1/L2» (2026-07-26).
 
 ---
 
@@ -8,60 +8,129 @@ Use this template to document what practitioners in this domain attend to.
 
 Objects of attention are the entities, states, or phenomena that practitioners observe, measure, or manipulate. They are NOT methods (what you do) but rather what you focus on while doing it.
 
-Examples:
-- A doctor attends to: vital signs, symptoms, patient history
-- A project manager attends to: deadlines, dependencies, stakeholder concerns
-- An engineer attends to: system states, error logs, performance metrics
-
----
-
-## Object of Attention Entry Format
-
-### [OA.001] Object Name
-
-**What it is**: _Brief description of this object of attention._
-
-**Why practitioners attend to it**: _What decisions or actions does attending to this enable?_
-
-**How it is observed/measured**:
-- _Observable indicator 1_
-- _Observable indicator 2_
-
-**Related methods** (that involve this object):
-- [DOMAIN.M.XXX](link)
-
-**Related work products** (that capture or represent this object):
-- [DOMAIN.WP.XXX](link)
-
-**Common mistakes** in attending to this:
-- [DOMAIN.FM.XXX](link) — _brief note_
-
 ---
 
 ## Objects of Attention Index
 
 | ID | Object | Related Methods |
-|----|--------|-----------------|
-| OA.001 | _Name_ | M.001, M.003 |
+|----|--------|-------------------|
+| [FE.OA.001](#fe-oa-001) | Нижний модуль | FE.M.001 (шаги 2a, 2b) |
+| [FE.OA.002](#fe-oa-002) | Верхний модуль | FE.M.001 (шаг 5) |
+| [FE.OA.003](#fe-oa-003) | Пенал | FE.M.001 (шаги 2a-7) |
+| [FE.OA.004](#fe-oa-004) | Угловой модуль (Метровик) | FE.M.001, FE.M.003 |
+| [FE.OA.005](#fe-oa-005) | Datum (базовая плоскость Z) | FE.M.001 (шаг 2b) |
 
 ---
 
-## Template Entry (Copy This)
+## [FE.OA.001] Нижний модуль
 
-### [OA.XXX] _Object Name_
+**What it is**: Корпус ЛДСП 16 мм, задающий базовую горизонтальную ось (Datum) гарнитура — первый объект, который расставляется в проекте.
 
-**What it is**: _TBD_
-
-**Why practitioners attend to it**: _TBD_
+**Why practitioners attend to it**: Все последующие уровни (столешница, верхний ярус, пеналы) зависят от верного положения нижнего яруса — ошибка здесь каскадно ломает всё выше.
 
 **How it is observed/measured**:
--
+- Глубина по корпусу 553 мм, боковина 704×500 мм (базовая комплектация)
+- Высота опор (ножек): 100 мм (база) или 150 мм
+- Метод крепления фасада (распашные двери / выдвижные ящики / комбинированные) — от него зависит шаг ширины и число фасадов
+- Технический зазор от стены: 51 мм (с техникой) / 41 мм (без техники)
 
-**Related methods**:
--
+**Related methods** (that involve this object):
+- [FE.M.001](../03-methods/FE.M.001.md) — шаги 2a (расстановка), 2b (высота ножек)
 
 **Related work products**:
--
+- [FE.WP.001](../04-work-products/FE.WP.001.md) — размеры и позиция фиксируются в Спецификации
+
+**Common mistakes** in attending to this:
+- [FE.GRD.001](../05-failure-modes/FE.GRD.001.md) — игнорирование технического зазора ради симметрии
+
+---
+
+## [FE.OA.002] Верхний модуль
+
+**What it is**: Корпус, обеспечивающий гравитационно независимое хранение — навешивается на стену выше нижнего яруса.
+
+**Why practitioners attend to it**: Должен сохранять вертикальную симметрию линий с нижним ярусом; уровень навески жёстко связан с высотой ножек нижнего яруса, а не выбирается независимо.
+
+**How it is observed/measured**:
+- Глубина по корпусу 300 мм (328 мм габарит с фасадом)
+- Уровень навесных элементов: 1420 мм при ножках 100 мм, 1470 мм при ножках 150 мм
+- Метод крепления: распашные двери, газлифты, подъёмные механизмы на две двери, сушка в комплекте
+
+**Related methods**:
+- [FE.M.001](../03-methods/FE.M.001.md) — шаг 5 (верхний ярус с сохранением симметрии)
+
+**Related work products**:
+- [FE.WP.001](../04-work-products/FE.WP.001.md)
 
 **Common mistakes**:
--
+- Несогласованный уровень навески при смене высоты ножек нижнего яруса задним числом — не выделен отдельным гвардом, наблюдаемый риск из источников
+
+---
+
+## [FE.OA.003] Пенал
+
+**What it is**: Шкаф-колонна во всю высоту гарнитура, чаще всего под встраиваемую технику (духовой шкаф, холодильник, СВЧ).
+
+**Why practitioners attend to it**: Высота пенала — не свободный параметр, а строго выведена из высоты верхних модулей и высоты ножек (см. таблицу ниже); ошибка здесь не компенсируется на более позднем шаге.
+
+**How it is observed/measured**:
+- Глубина по корпусу с ручкой: 598 мм (стандартный), 604 мм (под холодильник)
+- Высота пенала: 2140/2340 мм при верхних модулях 720/920 мм (ножки 100 мм); 2190/2390 мм при тех же верхних модулях (ножки 150 мм)
+- Разбивка на выдвижные ящики (120/180/270/360 мм) и распашные секции
+
+**Related methods**:
+- [FE.M.001](../03-methods/FE.M.001.md) — присутствует на всех шагах 2a-7 как ограничение, не отдельный шаг
+
+**Related work products**:
+- [FE.WP.001](../04-work-products/FE.WP.001.md)
+
+**Common mistakes**:
+- [FE.GRD.006](../05-failure-modes/FE.GRD.006.md) — расчёт пенала под встроенную технику без артикула
+
+---
+
+## [FE.OA.004] Угловой модуль (Метровик)
+
+**What it is**: Особый L-образный холон, решающий проблему обхода внутреннего угла помещения — самый геометрически сложный тип модуля в номенклатуре.
+
+**Why practitioners attend to it**: Считается по обеим сторонам прилегания к стене при расчёте цены (не как один линейный размер), и требует наибольшего внимания к зазорам (два разных зазора — по боковине и по оргалиту).
+
+**How it is observed/measured**:
+- Габарит по корпусу: 555×955 мм
+- Зазор от стены: 45 мм по боковине корпуса, 55 мм по оргалиту
+- Отдельный зазор 95 мм по боковине 600 мм при установке отдельной техники (СМ, ПММ, отдельная плита) рядом с метровиком
+- Расчёт погонажа: обе стороны прилегания суммируются (например 1000+600 мм), с учётом технических зазоров
+
+**Related methods**:
+- [FE.M.001](../03-methods/FE.M.001.md) — расстановка на шаге 2a («угловые кухни строят от угла»)
+- [FE.M.003](../03-methods/FE.M.003.md) — особое правило расчёта погонажа для угловых модулей
+
+**Related work products**:
+- [FE.WP.001](../04-work-products/FE.WP.001.md)
+
+**Common mistakes**:
+- Расчёт погонажа метровика по одной стороне вместо обеих — систематически занижает цену; не выделено отдельным гвардом, риск описан в [FE.M.003](../03-methods/FE.M.003.md)
+
+---
+
+## [FE.OA.005] Datum (базовая плоскость Z)
+
+**What it is**: Не физический объект, а опорная горизонтальная плоскость по высоте, которую задают нижние модули и высота их опор — всё, что строится выше (верхний ярус, пеналы, стеновая панель), отсчитывается от неё.
+
+**Why practitioners attend to it**: Единственная точка в проекте, ошибка в которой не проявляется сразу (визуально всё может выглядеть нормально), но каскадно рассинхронизирует все последующие уровни — классический пример «тихой» ошибки.
+
+**How it is observed/measured**:
+- Высота опор: 100 мм или 150 мм — единственный настраиваемый параметр, который её определяет
+- Проверяется косвенно: совпадение уровня навески верхнего яруса и высоты пенала с выбранной высотой опор
+
+**Related methods**:
+- [FE.M.001](../03-methods/FE.M.001.md) — шаг 2b фиксирует Datum как инвариант, который дальше не редактируется
+
+**Related work products**: —
+
+**Common mistakes**:
+- Изменение высоты опор после того, как верхний ярус уже расставлен по прежнему уровню навески — не выделено отдельным гвардом, прямое следствие структуры шага 2b
+
+---
+
+_Objects of Attention per SPF.SPEC.001/003. Pack ID: FE._

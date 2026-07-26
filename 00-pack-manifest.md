@@ -63,12 +63,12 @@ _Описывает инженерную методологию проектир
 | Section | Item Count | Status |
 |---------|------------|--------|
 | Distinctions | 8 | draft (Ф1 выполнена, seed) |
-| Roles | 5 | draft (перечислены в источнике, не оформлены как карточки) |
-| Methods | 1 | draft (P2W - перечислен в источнике) |
-| Work Products | 0 | draft |
-| Failure Modes | 9 | draft (перечислены как «Guards» в источнике) |
-| SoTA Annotations | 1 | draft |
-| Maps | 0 | draft |
+| Roles | 5 | active (карточки оформлены в 02A-roles.md) |
+| Methods | 2 | active (FE.M.001 P2W, FE.M.003 расчёт погонажа — оба кросс-валидированы; FE.M.002 конвейер Фабрики и FE.M.004 интерфейсная процедура — кандидаты, не созданы) |
+| Work Products | 1 | active (FE.WP.001 Спецификация) |
+| Failure Modes (Guards) | 10 | active (FE.GRD.001-010, было учтено 9 — исправлено при формализации, 8/10 кросс-валидированы вторым источником) |
+| SoTA Annotations | 2 | active (два независимых источника, кросс-валидированы) |
+| Maps | 0 | draft (генератор `generate-map.py` из SPF даёт неверный код домена — не чинили, вне scope этого Pack) |
 
 ---
 
@@ -99,3 +99,6 @@ _Register domain-specific entity kinds here. Leave empty if only using base kind
 | Date | Change | Author |
 |------|--------|--------|
 | 2026-07-26 | Initial creation, seed-документ ESP_v2 в 06-sota/ | lokplvl / Claude |
+| 2026-07-26 | Роли (5) и метод P2W (FE.M.001) оформлены как карточки; инструмент-индекс заполнен реальным составом «Базис» с рабочего стола пилота | lokplvl / Claude |
+| 2026-07-26 | Второй независимый источник (ONEON Kitchen) ingested в 06-sota/, кросс-валидация FE.M.001 и Guards | lokplvl / Claude |
+| 2026-07-26 | 10 гвардов оформлены как карточки (FE.GRD.001-010, 8/10 кросс-валидированы); FE.WP.001 (Спецификация) и FE.M.003 (расчёт погонажа, кросс-валидирован) созданы; счётчик Failure Modes исправлен с 9 на 10 | lokplvl / Claude |

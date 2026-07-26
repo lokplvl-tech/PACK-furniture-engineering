@@ -1,4 +1,4 @@
-# Methods Index Template
+# Methods Index: Мебельный инжиниринг
 
 This file provides a navigable index of all methods in the pack.
 
@@ -17,17 +17,29 @@ A method is NOT:
 
 ## Methods by Category
 
-### Category 1: _Category Name_
+### Категория 1: Проектирование (Дизайнер-конструктор)
 
 | ID | Method Name | Produces | Status |
 |----|-------------|----------|--------|
-| [DOMAIN.M.001](../03-methods/DOMAIN.M.001.md) | _Name_ | WP.001 | current |
+| [FE.M.001](../03-methods/FE.M.001.md) | P2W — Принципы в работу | FE.WP.001 | active |
 
-### Category 2: _Category Name_
+### Категория 2: Физический конвейер (Фабрика) — не формализован
 
 | ID | Method Name | Produces | Status |
 |----|-------------|----------|--------|
-| [DOMAIN.M.002](../03-methods/DOMAIN.M.002.md) | _Name_ | WP.002 | current |
+| _FE.M.002 (кандидат)_ | Физическая сборка L0→L1 (Раскрой→Кромление→Присадка→ПВХ-плёнка→Комплектование) | Набор деталей | не создан |
+
+### Категория 3: Коммерческий расчёт (роль не формализована)
+
+| ID | Method Name | Produces | Status |
+|----|-------------|----------|--------|
+| [FE.M.003](../03-methods/FE.M.003.md) | Расчёт погонажа кухонного гарнитура | строка в FE.WP.001 | active |
+
+### Категория 4: Интерфейс «Базис-Салон» — не формализован
+
+| ID | Method Name | Produces | Status |
+|----|-------------|----------|--------|
+| _FE.M.004 (кандидат)_ | Процедурный уровень P2W: создание заказа/клиента/помещения в интерфейсе (см. `06-sota/oneon-kitchen-tehchast.md` §10) | — | не создан |
 
 ---
 
@@ -35,7 +47,8 @@ A method is NOT:
 
 | ID | Method Name | Category | Produces | SoTA |
 |----|-------------|----------|----------|------|
-| | | | | |
+| FE.M.001 | P2W — Принципы в работу | Проектирование | FE.WP.001 | current |
+| FE.M.003 | Расчёт погонажа кухонного гарнитура | Коммерческий расчёт | строка в FE.WP.001 | current |
 
 ---
 
@@ -43,7 +56,7 @@ A method is NOT:
 
 | Work Product | Produced By Methods |
 |--------------|---------------------|
-| [DOMAIN.WP.001](../04-work-products/DOMAIN.WP.001.md) | M.001, M.003 |
+| [FE.WP.001](../04-work-products/FE.WP.001.md) (Спецификация) | FE.M.001 (создаёт), FE.M.003 (дополняет строкой погонажа) |
 
 ---
 

@@ -1,6 +1,6 @@
-# Tools Index Template
+# Tools Index: Мебельный инжиниринг
 
-This file provides a navigable index of tools relevant to this domain.
+> Источник: рабочий стол пилота (форк САПР «Базис»), сверено с `06-sota/Эпистемологический стандарт предприятия.md`.
 
 ---
 
@@ -17,40 +17,49 @@ A tool is NOT:
 
 ## Tools by Category
 
-### Category 1: _Category Name_
+### Категория 1: Проектирование (Дизайнер-конструктор)
 
 | Tool Name | Supports Methods | Type |
-|-----------|------------------|------|
-| _Tool 1_ | M.001, M.002 | software / physical / conceptual |
+|-----------|-------------------|------|
+| «Базис-Салон» / «Базис-Мебельщик» (пользовательский форк) | [FE.M.001](../03-methods/FE.M.001.md) — все 8 шагов P2W | software |
 
-### Category 2: _Category Name_
+### Категория 2: Физический конвейер (Фабрика) — метод ещё не формализован (кандидат FE.M.002)
 
 | Tool Name | Supports Methods | Type |
-|-----------|------------------|------|
-| _Tool 2_ | M.003 | software / physical / conceptual |
+|-----------|-------------------|------|
+| «Раскрой» | Раскрой плит ЛДСП/МДФ (§1, стадия 1 конвейера L1) | software |
+| «ЧПУ» | Генерация G-кодов для форматно-раскроечного станка (кромление, присадка) | software |
+| «Упаковка» | Комплектование готовых деталей фурнитурой и метизами (§1, стадия 5) | software |
+
+### Категория 3: Коммерческий и складской контур
+
+| Tool Name | Supports Methods | Type |
+|-----------|-------------------|------|
+| «Смета» | Расчёт стоимости заказа по погонажу и номенклатуре (§7.9 источника) | software |
+| «Склад» | Учёт деталей и фурнитуры L1 | software |
+| «Салон» | Работа с клиентом (роль FE.R.004) — согласование, продажа | software |
+| «Менеджер прайс-листов» | Ведение номенклатуры и цен, используемых в «Смете» | software |
 
 ---
 
-## Tool Entry Format (If Detailed Descriptions Needed)
+## Tool Entry Format (Detailed)
 
-### Tool Name
+### «Базис-Салон» / «Базис-Мебельщик»
 
-**Type**: software | physical | conceptual
+**Type**: software
 
-**Purpose**: _What this tool enables._
+**Purpose**: Единственная точка входа для метода [FE.M.001](../03-methods/FE.M.001.md) — построение изоморфной цифровой модели гарнитура и генерация Спецификации.
 
 **Supports methods**:
-- [DOMAIN.M.XXX](../03-methods/DOMAIN.M.XXX.md)
+- [FE.M.001](../03-methods/FE.M.001.md)
 
-**Alternatives**: _Other tools that serve similar purpose._
+**Alternatives**: _не документированы — стандарт предприятия «Датум Мебель» жёстко привязан к этому САПР_
 
-**Notes**: _Any caveats, versioning, or selection criteria._
+**Notes**: Пилот работает с собственным форком базового «Базис-Салон». Расхождения форка с описанным в источнике поведением — фиксировать как отдельное различение, если найдутся.
 
 ---
 
 ## Notes on Tool Documentation
 
-- Tools are indexed, not deeply documented (unless domain-specific)
-- Generic tools (spreadsheets, text editors) need not be listed
-- Focus on tools that are specific to this domain's methods
-- Tool recommendations (which tool to use) belong downstream, not here
+- Раскрой / ЧПУ / Смета / Склад / Салон / Упаковка / Менеджер прайс-листов образуют отдельный, ещё не формализованный конвейер (кандидат метода FE.M.002 — физическая сборка L0→L1, роль [FE.R.005](02A-roles.md#fe-r-005) Фабрика)
+- «Базис-Салон» — единственный инструмент, закрывающий весь метод FE.M.001; остальные модули относятся к работам ПОСЛЕ шага 8 (DRR и Комиссионирование)

@@ -62,7 +62,7 @@ _Описывает инженерную методологию проектир
 
 | Section | Item Count | Status |
 |---------|------------|--------|
-| Distinctions | 0 | draft |
+| Distinctions | 8 | draft (Ф1 выполнена, seed) |
 | Roles | 5 | draft (перечислены в источнике, не оформлены как карточки) |
 | Methods | 1 | draft (P2W - перечислен в источнике) |
 | Work Products | 0 | draft |

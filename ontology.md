@@ -92,6 +92,7 @@ Holon (HOL)
 
 | Abbreviation | Full form (RU) | Full form (EN) | Level |
 |-------------|---------------|----------------|-------|
+| Datum | Кодовое имя компании «Датум Мебель» в идентификаторах ролей (`UTS.Datum.Role.*`) - латиница, техническое ограничение на кириллицу в кодах | Company code for «Датум Мебель» in role IDs | Pack |
 | P2W | Принципы в работу | Principles to Work | Pack |
 | ЛДСП | Ламинированная древесно-стружечная плита | Laminated chipboard | Pack |
 | МДФ | Мелкодисперсная фракция (плита) | Medium Density Fibreboard | Pack |

@@ -13,14 +13,14 @@
 
 | Code | Type | FPF/SPF Concept | Definition | ≠ (what it is NOT) | Source |
 |------|------|-----------------|------------|---------------------|--------|
-| `M` | Method | U.Method | _TBD_ | ≠ scenario, ≠ tool | SPF (base) |
-| `WP` | Work Product | U.Work + U.Episteme | _TBD_ | ≠ method description | SPF (base) |
-| `FM` | Failure Mode | — (SPF-specific) | _TBD_ | ≠ code bug | SPF (base) |
-| `D` | Distinction | A.7 Strict Distinction | _TBD_ | ≠ fact, ≠ definition | SPF (base) |
-| `R` | Role | U.RoleAssignment | _TBD_ | ≠ person, ≠ job title | SPF (base) |
-| `CHR` | Characteristic | U.Characteristic | _TBD_ | ≠ metric, ≠ indicator | SPF (base) |
-| `SOTA` | SoTA Annotation | — (SPF-specific) | _TBD_ | ≠ literature review | SPF (base) |
-| `MAP` | Map | U.Episteme | _TBD_ | ≠ content | SPF (base) |
+| `M` | Method | U.Method | Повторяемая последовательность рабочих ходов для достижения результата в конкретной ситуации домена (например, P2W - трансляция физических ограничений в клики CAD-системы) | ≠ scenario, ≠ tool | SPF (base) |
+| `WP` | Work Product | U.Work + U.Episteme | Проверяемый артефакт, полученный в результате применения метода (например, Спецификация, 3D-эскиз) - обязывающий результат, не черновик | ≠ method description | SPF (base) |
+| `FM` | Failure Mode | — (SPF-specific) | Типовой, повторяющийся способ, которым метод или рабочий продукт даёт сбой на практике - с наблюдаемыми симптомами и причиной | ≠ code bug | SPF (base) |
+| `D` | Distinction | A.7 Strict Distinction | Пара близких по смыслу понятий, которые часто путают на практике, с явным критерием разделения (тест «что это НЕ означает») | ≠ fact, ≠ definition | SPF (base) |
+| `R` | Role | U.RoleAssignment | Функциональное место в конвейере с определённой зоной ответственности (Work/Claim Scope) и методом работы - не конкретный человек | ≠ person, ≠ job title | SPF (base) |
+| `CHR` | Characteristic | U.Characteristic | Измеримый числовой или логический параметр объекта/процесса домена (зазор, нагрузка, допуск) - проверяем измерением, не мнением | ≠ metric, ≠ indicator | SPF (base) |
+| `SOTA` | SoTA Annotation | — (SPF-specific) | Запись независимого внешнего источника с конкретными тезисами и указанием, что именно они подтверждают или уточняют в паке | ≠ literature review | SPF (base) |
+| `MAP` | Map | U.Episteme | Свод связей между всеми сущностями пака - единая точка навигации, не дублирует содержимое самих карточек | ≠ content | SPF (base) |
 | `HOL` | Holon (Холон) | U.System | Узел холархии - одновременно целое на своём уровне и часть системы выше | ≠ произвольная деталь, ≠ сборка вне холархии | Pack (extended) |
 | `GRD` | Guard (Гвард) | — (SPF-specific, аналог FM) | Эпистемологический барьер, блокирующий переход на следующую стадию при нарушении инварианта | ≠ рекомендация, ≠ soft warning | Pack (extended) |
 
@@ -92,7 +92,8 @@ Holon (HOL)
 
 | Abbreviation | Full form (RU) | Full form (EN) | Level |
 |-------------|---------------|----------------|-------|
-| Datum | Кодовое имя компании «Датум Мебель» в идентификаторах ролей (`UTS.Datum.Role.*`) - латиница, техническое ограничение на кириллицу в кодах | Company code for «Датум Мебель» in role IDs | Pack |
+| DM | Кодовое имя компании «Датум Мебель» в идентификаторах ролей (`UTS.DM.Role.*`) - латиница, техническое ограничение на кириллицу в кодах. **Не путать с термином «Datum»** ниже (омоним, разные значения) | Company code for «Датум Мебель» in role IDs | Pack |
+| Datum | Базовая горизонтальная плоскость Z, задаваемая расстановкой нижних модулей - инвариант, который дальше не редактируется (см. [FE.OA.005](02-domain-entities/02B-objects-of-attention.md#fe-oa-005)). **Не путать с DM** выше (омоним, разные значения) | Z-reference plane (datum plane), not the company code | Pack |
 | P2W | Принципы в работу | Principles to Work | Pack |
 | ЛДСП | Ламинированная древесно-стружечная плита | Laminated chipboard | Pack |
 | МДФ | Мелкодисперсная фракция (плита) | Medium Density Fibreboard | Pack |

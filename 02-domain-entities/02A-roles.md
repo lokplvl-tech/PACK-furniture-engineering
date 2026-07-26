@@ -39,6 +39,7 @@ A role is NOT:
 
 **Methods performed**:
 - [FE.M.001](../03-methods/FE.M.001.md) — P2W, все 8 шагов
+- [FE.M.005](../03-methods/FE.M.005.md) — генерация гипотез (шаг Абдукция) при разрешении проектных коллизий
 
 **Work products owned**:
 - Спецификация (FE.WP.001, карточка не создана)
@@ -64,6 +65,7 @@ A role is NOT:
 
 **Methods performed**:
 - Контроль-гейт на шаге 8 метода [FE.M.001](../03-methods/FE.M.001.md)
+- [FE.M.005](../03-methods/FE.M.005.md) — запускает цикл АДИ при обнаружении коллизии, снимает блокировку Quality Gate после чистого решения или метки [FE.WP.002](../04-work-products/FE.WP.002.md)
 
 **Work products owned**:
 - Отчёт DRR

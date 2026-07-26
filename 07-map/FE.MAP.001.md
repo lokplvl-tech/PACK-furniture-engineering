@@ -5,7 +5,7 @@ scope: full-pack
 created: 2026-07-26
 last_updated: 2026-07-26
 generated: false
-revision: 5
+revision: 6
 ---
 
 # [FE.MAP.001] Pack Navigation Map
@@ -23,12 +23,12 @@ revision: 5
 | Holons (HOL, extended kind) | 7 (L0-L6) |
 | Objects of Attention (OA) | 5 |
 | Characteristics (CHR) | 11 |
-| Methods (M) | 3 (+1 кандидат, не создан: FE.M.004) |
-| Work Products (WP) | 1 |
+| Methods (M) | 4 (+1 кандидат, не создан: FE.M.004) |
+| Work Products (WP) | 2 |
 | Guards (GRD, extended kind) | 10 |
 | Service Clauses (SC) | 1 |
 | SoTA Sources | 2 |
-| **Total (реально существующих карточек)** | **54** |
+| **Total (реально существующих карточек)** | **56** |
 
 ---
 
@@ -111,6 +111,7 @@ revision: 5
 | [FE.M.001](../03-methods/FE.M.001.md) | P2W — Принципы в работу | FE.WP.001 | current, кросс-валидирован | active |
 | [FE.M.002](../03-methods/FE.M.002.md) | Физическая сборка L0→L1 | Набор деталей | current, кросс-валидирован | active |
 | [FE.M.003](../03-methods/FE.M.003.md) | Расчёт погонажа кухонного гарнитура | строка в FE.WP.001 | current, кросс-валидирован | active |
+| [FE.M.005](../03-methods/FE.M.005.md) | Разрешение проектных коллизий (цикл АДИ) | FE.WP.002 (условно) | hypothesis, единственный источник | active |
 
 **Кандидат, не создан:** FE.M.004 (процедурный уровень P2W в интерфейсе «Базис-Салон»).
 
@@ -119,6 +120,7 @@ revision: 5
 | ID | Name | Produced By | Status |
 |----|------|-------------|--------|
 | [FE.WP.001](../04-work-products/FE.WP.001.md) | Спецификация (эскиз + размеры + метки) | FE.M.001, FE.M.003 | active |
+| [FE.WP.002](../04-work-products/FE.WP.002.md) | Метка согласованного отклонения (DRR-метка) | FE.M.005 | active |
 
 ## Guards (GRD, extended kind)
 

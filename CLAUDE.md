@@ -7,4 +7,4 @@ Source-of-truth для домена: инженерная методология
 
 При работе с этим Pack: читать 00-pack-manifest.md для навигации.
 
-Пока `name_status: provisional` в манифесте: каждое новое различение в `01-domain-contract/01B-distinctions.md` получает заголовок `### {{PACK_ID}}.D.NNN: <Название>` (плейсхолдер `{{PACK_ID}}`, не реальный код Pack'а), а путь `01-domain-contract/01B-distinctions.md` добавляется в `provisional_distinction_files` в `.pfad-decision.md` (если его там ещё нет - не дублировать). Если в `01B-distinctions.md` набралось 3+ различений - предложить пользователю финализацию имени (см. `pack-new/SKILL.md` Шаг 2 «Финализация имени» в FMT-exocortex-template).
+Имя финализировано (`name_status: finalized`, код `FE`). Новые различения в `01-domain-contract/01B-distinctions.md` получают заголовок `### FE.D.NNN: <Название>`.

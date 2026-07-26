@@ -10,7 +10,7 @@ pack_name: Мебельный инжиниринг (Furniture Engineering)
 version: 0.1.0
 fpf_edition: v1.0
 status: draft
-name_status: provisional
+name_status: finalized
 sota_sources: grounded
 maintainers:
   - name: lokplvl

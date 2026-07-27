@@ -66,6 +66,8 @@
 
 **Related Roles**: [FE.R.003](02A-roles.md#fe-r-003) Монтажник
 
+**Related Methods**: [FE.M.006](../03-methods/FE.M.006.md) — монтаж, производящий этот холон из L1+L2
+
 ---
 
 ## [FE.HOL.L2] Подсистемы (Модули)

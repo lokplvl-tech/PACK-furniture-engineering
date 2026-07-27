@@ -3,9 +3,9 @@ id: FE.MAP.001
 name: Pack Navigation Map
 scope: full-pack
 created: 2026-07-26
-last_updated: 2026-07-26
+last_updated: 2026-07-27
 generated: false
-revision: 6
+revision: 7
 ---
 
 # [FE.MAP.001] Pack Navigation Map
@@ -23,12 +23,12 @@ revision: 6
 | Holons (HOL, extended kind) | 7 (L0-L6) |
 | Objects of Attention (OA) | 5 |
 | Characteristics (CHR) | 11 |
-| Methods (M) | 4 (+1 кандидат, не создан: FE.M.004) |
+| Methods (M) | 5 (+1 кандидат, не создан: FE.M.004) |
 | Work Products (WP) | 2 |
-| Guards (GRD, extended kind) | 10 |
+| Guards (GRD, extended kind) | 11 |
 | Service Clauses (SC) | 1 |
-| SoTA Sources | 2 |
-| **Total (реально существующих карточек)** | **56** |
+| SoTA Sources | 3 |
+| **Total (реально существующих карточек)** | **59** |
 
 ---
 
@@ -112,6 +112,7 @@ revision: 6
 | [FE.M.002](../03-methods/FE.M.002.md) | Физическая сборка L0→L1 | Набор деталей | current, кросс-валидирован | active |
 | [FE.M.003](../03-methods/FE.M.003.md) | Расчёт погонажа кухонного гарнитура | строка в FE.WP.001 | current, кросс-валидирован | active |
 | [FE.M.005](../03-methods/FE.M.005.md) | Разрешение проектных коллизий (цикл АДИ) | FE.WP.002 (условно) | hypothesis, единственный источник | active |
+| [FE.M.006](../03-methods/FE.M.006.md) | Монтаж гарнитура у клиента (L1+L2 → L3) | Собранный гарнитур (L3, материальный) | current, частично кросс-валидирован ГОСТ | active |
 
 **Кандидат, не создан:** FE.M.004 (процедурный уровень P2W в интерфейсе семейства «Базис»).
 
@@ -136,6 +137,7 @@ revision: 6
 | [FE.GRD.008](../05-failure-modes/FE.GRD.008.md) | Врезка мойки в зону стыка столешниц | critical | ✅ принцип идентичен, числа расходятся |
 | [FE.GRD.009](../05-failure-modes/FE.GRD.009.md) | Расхождение метража при заказе полотен | major | ✅ дословно |
 | [FE.GRD.010](../05-failure-modes/FE.GRD.010.md) | Пропуск обязательных меток при передаче в производство | critical | ✅ концептуально |
+| [FE.GRD.011](../05-failure-modes/FE.GRD.011.md) | Розетка ближе нормативного расстояния от воды/газа | critical | ❌ источник другого рода (ПУЭ/СП, не практика компаний) |
 
 Индекс с полным описанием кросс-валидации: [`05-failure-modes/00-guards-index.md`](../05-failure-modes/00-guards-index.md).
 
@@ -151,6 +153,7 @@ revision: 6
 |----------|----------|------|
 | 1 | Датум Мебель | [`06-sota/Эпистемологический стандарт предприятия.md`](../06-sota/Эпистемологический%20стандарт%20предприятия.md) |
 | 2 | ONEON Kitchen | [`06-sota/oneon-kitchen-tehchast.md`](../06-sota/oneon-kitchen-tehchast.md) |
+| 3 | Внешние госнормативы (ГОСТ/ПУЭ/СП) | [`06-sota/external-regulatory-standards.md`](../06-sota/external-regulatory-standards.md) |
 
 Сводная карточка сравнения обоих источников: [`06-sota/furniture-engineering-sota-sheet.md`](../06-sota/furniture-engineering-sota-sheet.md).
 

@@ -151,7 +151,7 @@ revision: 7
 
 | Источник | Компания | Файл |
 |----------|----------|------|
-| 1 | Датум Мебель | [`06-sota/Эпистемологический стандарт предприятия.md`](../06-sota/Эпистемологический%20стандарт%20предприятия.md) |
+| 1 | Датум Мебель | [`06-sota/datum-mebel-epistemic-standard.md`](../06-sota/datum-mebel-epistemic-standard.md) |
 | 2 | ONEON Kitchen | [`06-sota/oneon-kitchen-tehchast.md`](../06-sota/oneon-kitchen-tehchast.md) |
 | 3 | Внешние госнормативы (ГОСТ/ПУЭ/СП) | [`06-sota/external-regulatory-standards.md`](../06-sota/external-regulatory-standards.md) |
 

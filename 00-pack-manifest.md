@@ -50,6 +50,9 @@ _Описывает инженерную методологию проектир
 | method vs tool | P2W (Принципы в работу / Principles to Work) - метод трансляции физики в клики CAD, «Базис» (семейство инструментов: Базис-Салон, Базис-Мебельщик, Базис-Шкаф и др.) - инструмент. Код `P2W` совпадает с паттерном FPF `E.18.1`, но это омоним разных понятий - расшифровка не переносится, см. `ontology.md` §6 |
 | role | Дизайнер-конструктор, Технолог, Монтажник, Фабрика, Клиент - формализованные Карточки Ролей |
 | Transformation Flow Structure (E.18, E.18.3) | Формальная структура последовательности шагов FE.M.001: типизированные позиции трансформации, границы «без автоматической композиции» между подшагами, гварды привязаны к точным позициям, не к методу целиком - см. `03-methods/FE.M.001.md` |
+| Local-First Unification Naming Protocol (F.18) | NameCard домена, см. `01-domain-contract/01D-name-card.md` |
+| Domain Principle Framework Authoring (E.4.DPF) | Контракт стадии авторства, см. `01-domain-contract/01E-dpf-contract.md` (не путать с `01C-dpf-designer-technologist.md` - другое назначение) |
+| Composition of `U.Discipline` (C.20) | Описание домена как прикладной дисциплины, см. `01-domain-contract/01F-discipline-composition.md` |
 
 ### Other SPF Packs
 
